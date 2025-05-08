@@ -1,3 +1,5 @@
+// ReSharper disable PropertyCanBeMadeInitOnly.Global
+
 namespace Bogoware.Utils;
 
 /// <summary>
@@ -14,21 +16,22 @@ public class StringTokenizer(StringTokenizer.TokenizerOptions? options = null)
         public bool RemoveEmptyEntries { get; set; } = true;
         public bool TrimEntries { get; set; } = true;
     }
-    
+
     public TokenizerOptions Options { get; } = options ?? new TokenizerOptions();
 
     public IEnumerable<string> GetTokens(string query)
     {
         if (string.IsNullOrWhiteSpace(query))
         {
-            return Enumerable.Empty<string>();
+            return [];
         }
-        
+
         StringSplitOptions splitOptions = StringSplitOptions.None;
         if (Options.RemoveEmptyEntries)
         {
             splitOptions |= StringSplitOptions.RemoveEmptyEntries;
         }
+
         if (Options.TrimEntries)
         {
             splitOptions |= StringSplitOptions.TrimEntries;
