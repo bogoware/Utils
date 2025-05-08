@@ -6,30 +6,58 @@ This repository is a collection of common utilities designed to streamline devel
 
 The **Common Utils Library** provides the following utility classes and methods for simplifying common development tasks:
 
-### 1. **TypeExtensions**
+### **StringTokenizer**
+   A utility class for tokenizing strings into substrings based on specified delimiters, with customizable options.
+
+   - **Constructor:**
+     - `StringTokenizer(StringTokenizer.TokenizerOptions? options = null):` Initializes a new instance with optional tokenizer settings.
+
+   - **TokenizerOptions:**
+     - **Delimiters:** An array of characters used to split the string. Default: `[ ' ', ',', ';', ':', '.', '!', '?' ]`.
+     - **RemoveEmptyEntries:** A boolean indicating whether to exclude empty tokens. Default: `true`.
+     - **TrimEntries:** A boolean indicating whether to trim whitespace from tokens. Default: `true`.
+
+   - **Methods:**
+     - **GetTokens(string query):** Splits the input string into tokens based on the specified delimiters and options.
+       - **Returns:** An `IEnumerable<string>` containing the resulting tokens.
+
+   - **Example:**
+     ```csharp
+     var tokenizer = new StringTokenizer(new StringTokenizer.TokenizerOptions
+     {
+         Delimiters = new[] { ',', ';' },
+         RemoveEmptyEntries = true,
+         TrimEntries = true
+     });
+
+     var tokens = tokenizer.GetTokens("apple, banana; orange");
+     // Result: ["apple", "banana", "orange"]
+     ```
+
+### **TypeExtensions**
    - **IsSubclassOfRawGeneric(Type type, Type generic):**   
      Determines whether a given type is a subclass of a generic type.  
      Example: `typeof(B).IsSubclassOfRawGeneric(typeof(A<>));`
 
-### 2. **StringExtensions** (fluent API)
+### **StringExtensions** (fluent API)
    - **IsNullOrEmpty(string? value):**  
      Checks if a string is null or an empty string.
    - **IsNullOrWhiteSpace(string? value):**  
      Checks if a string is null, empty, or consists only of whitespace characters.
 
-### 3. **ToStringHelpers** (fluent API)
+### **ToStringHelpers** (fluent API)
    Provides helper methods to convert various types into their string representations using invariant culture formatting.
    - Examples:
      - **ToStringInvariant(byte obj):** Converts a byte to its string representation.
      - **ToStringInvariant(DateOnly obj):** Converts a `DateOnly` object to its string representation.
 
-### 4. **StringParseHelpers** (fluent API)
+### **StringParseHelpers** (fluent API)
    Provides methods for parsing strings into various types using invariant culture.
    - Examples:
      - **ParseToIntInvariant(string obj):** Parses a string into an integer.
      - **ParseToDateTimeInvariant(string obj):** Parses a string into a `DateTime`.
 
-### 5. **CombinationGeneratorExtensions**
+### **CombinationGeneratorExtensions**
    Utilities for generating combinations from dictionaries and enumerables.
    - **GetAllCombinationsByKey<TKey, TValue>(IDictionary<TKey, IEnumerable<TValue>> dictionary):**  
      Generates all possible value combinations grouped by their respective keys.
