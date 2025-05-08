@@ -6,6 +6,9 @@ namespace Bogoware.Utils;
 /// A utility class for tokenizing strings into substrings based on specified delimiters,
 /// with support for custom options such as removing empty entries and trimming tokenized results.
 /// </summary>
+/// <remarks>
+/// Source code is available at <a href="https://github.com/bogoware/Utils">Bogoware.Utils</a>.
+/// </remarks>
 public class StringTokenizer(StringTokenizer.TokenizerOptions? options = null)
 {
     public class TokenizerOptions

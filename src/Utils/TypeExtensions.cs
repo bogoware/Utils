@@ -13,15 +13,23 @@ public static class TypeExtensions
     /// var isSubclass = typeof(B).IsSubclassOfRawGeneric(typeof(A&lt;&gt;)); // true
     /// </code>
     /// </example>
-    public static bool IsSubclassOfRawGeneric(this Type type, Type generic) {
+    /// <remarks>
+    /// Source code is available at <a href="https://github.com/bogoware/Utils">Bogoware.Utils</a>.
+    /// </remarks>
+    public static bool IsSubclassOfRawGeneric(this Type type, Type generic)
+    {
         var toCheck = type;
-        while (toCheck != null && toCheck != typeof(object)) {
+        while (toCheck != null && toCheck != typeof(object))
+        {
             var cur = toCheck.IsGenericType ? toCheck.GetGenericTypeDefinition() : toCheck;
-            if (generic == cur) {
+            if (generic == cur)
+            {
                 return true;
             }
+
             toCheck = toCheck.BaseType;
         }
+
         return false;
     }
 }

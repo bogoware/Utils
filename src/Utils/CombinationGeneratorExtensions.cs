@@ -3,6 +3,9 @@ namespace Bogoware.Utils;
 /// <summary>
 /// Provides extension methods for generating combinations of elements from dictionaries and enumerables.
 /// </summary>
+/// <remarks>
+/// Source code is available at <a href="https://github.com/bogoware/Utils">Bogoware.Utils</a>.
+/// </remarks>
 public static class CombinationGeneratorExtensions
 {
     /// <summary>
@@ -53,7 +56,8 @@ public static class CombinationGeneratorExtensions
     }
 
     /// <inheritdoc cref="GetCombinationsByKeyByKey{TK,TV}"/>
-    public static List<List<TV>> GetAllCombinationsByKey<TK, TV>(this IDictionary<TK, List<TV>> dictionary) where TK : notnull
+    public static List<List<TV>> GetAllCombinationsByKey<TK, TV>(this IDictionary<TK, List<TV>> dictionary)
+        where TK : notnull
         => GetAllCombinationsByKey(dictionary.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.AsEnumerable()));
 
     /// <summary>

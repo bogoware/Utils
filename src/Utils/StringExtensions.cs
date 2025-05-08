@@ -5,6 +5,9 @@ namespace Bogoware.Utils;
 /// <summary>
 /// Provides extension methods for string operations.
 /// </summary>
+/// <remarks>
+/// Source code is available at <a href="https://github.com/bogoware/Utils">Bogoware.Utils</a>.
+/// </remarks>
 public static class StringExtensions
 {
     /// <summary>
@@ -14,7 +17,7 @@ public static class StringExtensions
     /// <returns>
     /// true if the string is null or an empty string (""); otherwise, false.
     /// </returns>
-    public static bool IsNullOrEmpty([NotNullWhen(false)] this string? value) 
+    public static bool IsNullOrEmpty([NotNullWhen(false)] this string? value)
         => string.IsNullOrEmpty(value);
 
     /// <summary>
@@ -24,6 +27,6 @@ public static class StringExtensions
     /// <returns>
     /// true if the string is null, an empty string (""), or consists only of white-space characters; otherwise, false.
     /// </returns>
-    public static bool IsNullOrWhiteSpace([NotNullWhen(false)] this string? value) 
+    public static bool IsNullOrWhiteSpace([NotNullWhen(false)] this string? value)
         => string.IsNullOrWhiteSpace(value);
 }
