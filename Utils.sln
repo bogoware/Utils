@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Folder", "Solution Folder", "{994651A5-56A1-465F-93CA-E659422E2CD1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "src\Utils\Utils.csproj", "{CC0F532D-621A-41E3-BF13-C4782D3B1DF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D7F22F02-13B2-41AC-9AF9-A411823AEB4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E1156A69-4716-4F9B-81CC-4700EA34F9FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "test\Tests\Tests.csproj", "{724E046E-6672-435A-8372-7DC32C6A770B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC0F532D-621A-41E3-BF13-C4782D3B1DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC0F532D-621A-41E3-BF13-C4782D3B1DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC0F532D-621A-41E3-BF13-C4782D3B1DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC0F532D-621A-41E3-BF13-C4782D3B1DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724E046E-6672-435A-8372-7DC32C6A770B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724E046E-6672-435A-8372-7DC32C6A770B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724E046E-6672-435A-8372-7DC32C6A770B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724E046E-6672-435A-8372-7DC32C6A770B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC0F532D-621A-41E3-BF13-C4782D3B1DF7} = {D7F22F02-13B2-41AC-9AF9-A411823AEB4B}
+		{724E046E-6672-435A-8372-7DC32C6A770B} = {E1156A69-4716-4F9B-81CC-4700EA34F9FA}
+	EndGlobalSection
+EndGlobal
