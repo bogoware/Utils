@@ -36,10 +36,6 @@ The **Common Utils Library** provides the following utility classes and methods 
    - **GetAllCombinations<T>(IEnumerable<T> enumerable):**  
      Generates all subsets for an enumerable, including the empty subset.
 
----
-
-These utility classes provide flexible and reusable methods that reduce boilerplate code and simplify common operations in .NET applications.
-
 ## Contributing
 
 Contributions to this repository are most welcome! If you have utilities you believe would benefit other developers, feel free to submit a pull request. Please ensure all new utilities include:
